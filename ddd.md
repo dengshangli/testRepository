@@ -1,246 +1,224 @@
-# `var app = new Vue({` {#ngfngf}
+> * > > # var app = new Vue\({ {#ngfngf}
 
-`  el: '#app',`
+1. el: '\#app',
+2. data: {
+3. message: 'Hello Vue!'
 
-`  data: {`
+},
 
-`    message: 'Hello Vue!'`
+computed: {
 
-`  },`
+// a computed getter
 
-`   computed: {`
+reversedMessage: function \(\) {
 
-`    // a computed getter`
+// \`this\` points to the vm instance
 
-`    reversedMessage: function () {`
+return this.message.split\(''\).reverse\(\).join\(''\)
 
-``      // `this` points to the vm instance``
+}
 
-`      return this.message.split('').reverse().join('')`
+}
 
-`    }`
+}\)
 
-`  }`
+var app2 = new Vue\({
 
-`})`
+el: '\#app-2',
 
+data: {
 
+message: 'You loaded this page on ' + new Date\(\)
 
-`var app2 = new Vue({`
+}
 
-`  el: '#app-2',`
+}\)
 
-`  data: {`
+var app3 = new Vue\({
 
-`    message: 'You loaded this page on ' + new Date()`
+el: '\#app-3',
 
-`  }`
+data: {
 
-`})`
+seen: true
 
+}
 
+}\)
 
-`var app3 = new Vue({`
+var app4 = new Vue\({
 
-`  el: '#app-3',`
+el: '\#app-4',
 
-`  data: {`
+data: {
 
-`    seen: true`
+todos: \[
 
-`  }`
+{ text: 'Learn JavaScript' },
 
-`})`
+{ text: 'Learn Vue' },
 
+{ text: 'Build something awesome' }
 
+\]
 
-`var app4 = new Vue({`
+}
 
-`  el: '#app-4',`
+}\)
 
-`  data: {`
+var app5 = new Vue\({
 
-`    todos: [`
+el: '\#app-5',
 
-`      { text: 'Learn JavaScript' },`
+data: {
 
-`      { text: 'Learn Vue' },`
+message: 'Hello Vue.js!'
 
-`      { text: 'Build something awesome' }`
+},
 
-`    ]`
+methods: {
 
-`  }`
+reverseMessage: function \(\) {
 
-`})`
+this.message = this.message.split\(''\).reverse\(\).join\(''\)
 
+}
 
+}
 
-`var app5 = new Vue({`
+}\)
 
-`  el: '#app-5',`
+var app6 = new Vue\({
 
-`  data: {`
+el: '\#app-6',
 
-`    message: 'Hello Vue.js!'`
+data: {
 
-`  },`
+message: 'Hello Vue!'
 
-`  methods: {`
+}
 
-`    reverseMessage: function () {`
+}\)
 
-`      this.message = this.message.split('').reverse().join('')`
+Vue.component\('todo-item', {
 
-`    }`
+props: \['todo'\],
 
-`  }`
+template: '&lt;li&gt;{{ todo.text }}&lt;/li&gt;'
 
-`})`
+}\)
 
+var app7 = new Vue\({
 
+el: '\#app-7',
 
-`var app6 = new Vue({`
+data: {
 
-`  el: '#app-6',`
+groceryList: \[
 
-`  data: {`
+{ text: 'Vegetables' },
 
-`    message: 'Hello Vue!'`
+{ text: 'Cheese' },
 
-`  }`
+{ text: 'Whatever else humans are supposed to eat' }
 
-`})`
+\]
 
+}
 
+}\)
 
-`Vue.component('todo-item', {`
+var exmple1 = new Vue\({
 
-`  props: ['todo'],`
-
-`  template: '<li>{{ todo.text }}</li>'`
-
-`})`
-
-`var app7 = new Vue({`
-
-`  el: '#app-7',`
-
-`  data: {`
-
-`    groceryList: [`
-
-`      { text: 'Vegetables' },`
-
-`      { text: 'Cheese' },`
-
-`      { text: 'Whatever else humans are supposed to eat' }`
-
-`    ]`
-
-`  }`
-
-`})`
-
-
-
-`var exmple1 = new Vue({`
-
-`  el: '#exmple-1',`
+el: '\#exmple-1',
 
 ```
   data: {
 ```
 
-`    counter: 0`
+counter: 0
 
-`  },`
+},
 
-`   methods: {`
+methods: {
 
-`    addCount: function() {`
+addCount: function\(\) {
 
-`      this.counter+=1`
+this.counter+=1
 
-`    }`
+}
 
-`  }`
+}
 
-`})`
+}\)
 
+Vue.component\('simple-counter', {
 
+template:'&lt;button v-on:click="counter += 1"&gt;{{counter}}&lt;/button&gt;',
 
-`Vue.component('simple-counter', {`
+data: function\(\){
 
-`  template:'<button v-on:click="counter += 1">{{counter}}</button>',`
+return {counter: 0}
 
-`  data: function(){`
+}
 
-`    return {counter: 0}`
+}\)
 
-`  }`
+new Vue\({
 
-`})`
+el: '\#example-sim'
 
-`new Vue({`
+}\)
 
-`  el: '#example-sim'`
+Vue.component\('button-counter', {
 
-`})`
+template: '&lt;button v-on:click="increment"&gt;{{ counter }}&lt;/button&gt;',
 
+data: function \(\) {
 
+return {
 
-`Vue.component('button-counter', {`
+counter: 0
 
-`  template: '<button v-on:click="increment">{{ counter }}</button>',`
+}
 
-`  data: function () {`
+},
 
-`    return {`
+methods: {
 
-`      counter: 0`
+increment: function \(\) {
 
-`    }`
+this.counter += 1
 
-`  },`
+this.$emit\('increment'\)
 
-`  methods: {`
+}
 
-`    increment: function () {`
+},
 
-`      this.counter += 1`
+}\)
 
-`      this.$emit('increment')`
+new Vue\({
 
-`    }`
+el: '\#counter-event-example',
 
-`  },`
+data: {
 
-`})`
+total: 0
 
-`new Vue({`
+},
 
-`  el: '#counter-event-example',`
+methods: {
 
-`  data: {`
+incrementTotal: function \(\) {
 
-`    total: 0`
+this.total += 1
 
-`  },`
+}
 
-`  methods: {`
+}
 
-`    incrementTotal: function () {`
+}\)
 
-`      this.total += 1`
-
-`    }`
-
-`  }`
-
-`})`
-
-`function ddd(){}`
-
-
+function ddd\(\){}
 

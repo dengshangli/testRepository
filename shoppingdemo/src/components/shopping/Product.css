@@ -1,0 +1,35 @@
+.fig-container {
+  display:flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width:1000px;
+  margin:0 auto;
+  border:1px solid orange;
+  box-sizing:border-box;
+  padding:20px;
+}
+.fig-container figure {
+  display:inline-block;
+  width:200px;
+  border:1px solid orange;
+  box-sizing:border-box;
+  text-align:center;
+  padding :5px;
+  margin-left:30px;
+  margin-bottom:30px;
+}
+.fig-container figure img{
+  height:300px;
+  width:190px
+}
+.fig-container figure figcaption{
+  text-align:justify;
+}
+.fig-container figure figcaption h3{
+  color :red;
+}
+.fig-container figure figcaption .to-cart{
+  float:right
+}
+

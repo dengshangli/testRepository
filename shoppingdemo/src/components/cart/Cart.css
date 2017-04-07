@@ -1,0 +1,30 @@
+.cart-container {
+  text-align: center;
+}
+
+.cart-container .products-table {
+  width:1000px;
+  margin:0 auto;
+}
+.cart-container .products-table th,td{
+  text-align:center;
+}
+.cart-container .products-table .good img{
+  width:60px;
+  height:80px;
+}
+
+.cart-container .statistics{
+    text-align: justify;
+    box-sizing: border-box;
+  }
+.cart-container .statistics  .right-content{
+    float: right;
+}
+.cart-container .statistics .to-space{
+  margin-right:10px;
+  display:inline;
+}
+.red-font{
+  color:red;
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "key": 1,
+    "name": "奢侈品1",
+    "discription": "这是一个好商品",
+    "price": 53.72,
+    "image": "pic1.jpg",
+    "num": 1,
+    "subTotal": 0,
+    "isChecked": false
+  },
+   {
+    "key": 2,
+    "name": "奢侈品2",
+    "discription": "这是一个好商品",
+    "price": 35.45,
+    "image": "pic.jpg",
+    "num": 1,
+    "subTotal": 0,
+    "isChecked": false
+  },
+  {
+    "key": 3,
+    "name": "奢侈品3",
+    "discription": "这是一个好商品",
+    "price": 33.67,
+    "image": "pic4.jpg",
+    "num": 1,
+    "subTotal": 0,
+    "isChecked": false
+  },
+  {
+    "key": 4,
+    "name": "奢侈品4",
+    "discription": "这是一个好商品",
+    "price": 78.64,
+    "image": "pic6.jpg",
+    "num": 1,
+    "subTotal": 0,
+    "isChecked": false
+  },
+  {
+    "key": 5,
+    "name": "奢侈品5",
+    "discription": "这是一个好商品",
+    "price": 65.42,
+    "image": "pi4.jpg",
+    "num": 1,
+    "subTotal": 0,
+    "isChecked": false
+  },
+  {
+    "key": 6,
+    "name": "奢侈品6",
+    "discription": "这是一个好商品",
+    "price": 100.99,
+    "image": "pic7.jpg",
+    "num": 1,
+    "subTotal": 0,
+    "isChecked": false
+  }
+]
